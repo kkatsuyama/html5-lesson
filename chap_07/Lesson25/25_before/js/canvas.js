@@ -24,6 +24,12 @@ window.addEventListener("load", function() {
         context.drawImage(imageObj, 10, 0);
     }
 
+    // 映像を描画する
+    document.getElementById("draw4").addEventListener("click", function() {
+        var videoObj = document.getElementById("myVideo");
+        context.drawImage(videoObj, 220, 10);
+    }, true);
+
     // 画像の表示幅を指定して描画
     document.getElementById("draw1").addEventListener("click", function() {
         context.drawImage(imageObj, 250, 20, 100, 180);
@@ -45,14 +51,8 @@ window.addEventListener("load", function() {
         context.restore();
     }, true);
 
-    // 映像を描画する
-    document.getElementById("draw4").addEventListener("click", function() {
-        var videoObj = document.getElementById("myVideo");
-        context.drawImage(videoObj, 220, 10);
-    }, true);
-
     // Canvasを半分のサイズで描画する
-    document.getElementById("draw5"),addEventListener("click", function(){
+    document.getElementById("draw5").addEventListener("click", function() {
         context.drawImage(canvasObj, 20, 10);
     }, true);
 }, true);
